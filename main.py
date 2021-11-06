@@ -1,15 +1,21 @@
 from unittest.main import main
 
 
-a = "bob"
-b = "bbo"
 
-def permutation_checker():
-    uh = set(a)
-    k = set(b)
-    return a==b
+def permutation_checker(string_one, string_two):
+    
+    if len(string_one) == len(string_two):
 
-print(permutation_checker())
+        return True
+    
+    return False
+    
+        
+    
+
+
+
+
 
 if __name__ == '__main__':
     main()
