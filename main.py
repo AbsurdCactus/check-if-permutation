@@ -4,11 +4,23 @@ from unittest.main import main
 
 def permutation_checker(string_one, string_two):
     
-    if len(string_one) == len(string_two):
-
-        return True
+    string_two = [string_two]
+    string_one = [string_one]
+    string_one.sort()
+    string_two.sort()
     
-    return False
+    if len(string_one) != len(string_two):
+
+        return False
+
+    return string_one == string_two
+    
+    
+
+        
+                
+    
+  
     
         
     
