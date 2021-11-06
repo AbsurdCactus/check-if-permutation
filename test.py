@@ -20,11 +20,12 @@ class Testlength(unittest.TestCase):
         self.assertEqual(main.permutation_checker(
             string_one="a", string_two=""), False)
 
+
 class TestCharacters(unittest.TestCase):
 
     def test_a_b(self):
         self.assertEqual(main.permutation_checker(
-            string_one="a", string_two="b"), False)    
+            string_one="a", string_two="b"), False)
 
     def test_ab_ba(self):
         self.assertEqual(main.permutation_checker(
@@ -38,11 +39,16 @@ class TestCharacters(unittest.TestCase):
         self.assertEqual(main.permutation_checker(
             string_one="abc", string_two="abb"), False)
 
+
 class TestDuplicates(unittest.TestCase):
 
     def test_aab_abb(self):
         self.assertEqual(main.permutation_checker(
-            string_one="aab", string_two="abb"), False)              
+            string_one="aab", string_two="abb"), False)
+
+    def test_root_toor(self):
+        self.assertEqual(main.permutation_checker(
+            string_one="root", string_two="toor"), True)
 
 
 if __name__ == '__main__':
